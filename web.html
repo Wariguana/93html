@@ -1,0 +1,348 @@
+<html>
+    <head>
+        <title>SHOSSTORY</title>
+        <meta charset="utf-8">
+        <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+        <script>
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    rtl: true
+                });
+            });
+        </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            body {
+                background-color: #ffffff; 
+                color: #666666;
+                font-family: Arial, sans-serif;
+            }
+            h1, h2, h3 {
+                color: #364E6E; 
+            }
+            a {
+                color: #0396FF; 
+                text-decoration: none;
+            }
+            a:hover {
+                color: #0288D1;
+            }
+            .button {
+                background-color: #0396FF;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+            }
+            .button:hover {
+                background-color: #0288D1; 
+            }
+            /* Top bar */
+            .top {
+                background-color: white;
+                border-bottom: 1px solid #ddd;
+            }
+            .top .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+            }
+            .top .logo {
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .top .logo img {
+                width: 80px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+            /* Navigation bar */
+            .nav {
+                background-color: #333;
+                color: white;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .nav .icons {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+            .nav .icons a {
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .nav .icons a:hover {
+                color: #007BFF;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #444;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #555;
+            }
+            .dropdown:hover > .dropdown-content {
+                display: block;
+            }
+            .dropdown .dropdown-content .dropdown {
+                position: relative;
+            }
+            .dropdown .dropdown-content .dropdown .dropdown-content {
+                top: 0;
+                left: 100%;
+                display: none;
+                white-space: nowrap; /* 避免文字換行 */
+            }
+            .dropdown .dropdown-content .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown .dropdown-content .dropdown:hover ~ a {
+                margin-top: 160px;
+            }
+            .dropdown-content {
+                right: 0;
+            }
+            /* Banner */
+            .banner {
+                background-image: linear-gradient(to bottom, #1a1a1a, #333333);
+                color: rgb(221, 221, 221);
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .banner h1 {
+                margin-bottom: 20px;
+                color : rgba(255, 255, 255, 0.512);
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-shadow: 1px 1px 4px rgba(35, 26, 26, 0.8);
+            }
+            /* Faculty section */
+            .faculty {
+                background-color: white;
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .faculty h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            .faculty .container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .faculty .teacher {
+                text-decoration: none;
+                margin: 10px;
+            }
+            .faculty .teacher img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                border: 3px solid #ddd; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .faculty .teacher h3 {
+                background-color: rgba(39,40,34,0.5);
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                
+            }
+            /* Slider */
+            .slider {
+                background-color: black;
+                margin-bottom: 20px;
+            }
+            /* Contact section */
+            .contact {
+                background-color: #f9f9f9;
+                padding: 40px 20px;
+            }
+            .contact h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+                color: #364E6E;
+            }
+            .contact .infos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .contact .infos .left {
+                text-align: left;
+                max-width: 300px;
+            }
+            .contact .infos .left b {
+                font-size: 18px;
+                line-height: 1.8;
+            }
+            .contact .infos .left span {
+                color: #666;
+                padding-left: 10px;
+                display: block;
+            }
+            .contact .infos .right p {
+                margin-bottom: 10px;
+                font-size: 16px;
+                color: #555;
+            }
+            .contact .infos .right a {
+                display: inline-block;
+                margin: 5px;
+                transition: transform 0.2s;
+            }
+            .contact .infos .right a:hover {
+                transform: scale(1.1);
+            }
+            .contact .infos .right iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 5px;
+            }
+            .contact a img {
+                width: 50px; 
+                height: 50px; 
+                margin: 0 10px;
+            }
+
+            /* Footer */
+            footer {
+                background-color: #333333;
+                color: #ffffff; 
+                text-align: center;
+                padding: 20px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://github.com/Wariguana/html/raw/main/LOGO.JPG" alt="Logo">
+                </div>
+            </div>
+        </div>
+        <div class="nav">   
+            <div class="icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <div class="dropdown">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">首頁</a>
+                        <a href="#">賣場簡介</a>
+                        <div class="dropdown">
+                            <a href="#">熱門品牌</a>
+                            <div class="dropdown-content">
+                                <a href="#">Nike</a>
+                                <a href="#">New Balance</a>
+                                <a href="#">Asics</a>
+                                <a href="#">Adidas</a>
+                            </div>
+                        </div>
+                        <a href="#">聯絡我們</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner" id="introduction">
+            <h1>賣場簡介</h1>
+            <h1>精選全球頂級鞋履品牌</h1>
+            <h1>無論運動或正式場合</h1>
+            <h1>我們讓您走出自信每一步！</h1>
+        </div>
+        <div class="faculty" id="faculty">
+            <h2>熱門品牌</h2>
+            <div class="container">
+                <a class="teacher" href="#">
+                    <img src="https://github.com/Wariguana/html/raw/main/P1.jpg" alt="NIKE">
+                    <h3>NIKE</h3>
+                </a>
+                <a class="teacher" href="#">
+                    <img src="https://github.com/Wariguana/html/raw/main/P3.jpg" alt="ADIDAS">
+                    <h3>ADIDAS</h3>
+                </a>
+                <a class="teacher" href="#">
+                    <img src="https://github.com/Wariguana/html/raw/main/P2.jpg" alt="NEW BALANCE">
+                    <h3>NEW BALANCE</h3>
+                </a>        
+                <a class="teacher" href="#">
+                    <img src="https://github.com/Wariguana/html/raw/main/P4.jpg" alt="ASICS">
+                    <h3>ASICS</h3>
+                </a>        
+            </div>
+        </div>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="https://github.com/Wariguana/html/raw/main/slider1.jpg" alt="Slide 1"></li>
+                    <li><img src="https://github.com/Wariguana/html/raw/main/slider2.jpg" alt="Slide 2"></li>
+                    <li><img src="https://github.com/Wariguana/html/raw/main/slider3.jpg" alt="Slide 3"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact" id="about">
+            <h2>聯絡我們</h2>
+            <div class="infos">
+                <div class="left">
+                    <b>SHOSSTORY </b>
+                    <span>客服專線: 0800-123-456</span>
+                    <b>服務時間: 週一至週五 10:00 - 18:00</b>
+                    <span>Email: shosstory@gmail.com</span>
+                </div>
+                <div class="right">
+                    <p>追蹤我們的社群平台：</p>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="https://github.com/Wariguana/html/raw/main/D2.jpg" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="https://github.com/Wariguana/html/raw/main/D3.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://line.me" target="_blank">
+                        <img src="https://github.com/Wariguana/html/raw/main/D1.jpg" alt="LINE">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2024 SHOSSTORY. All Rights Reserved.
+        </div>
+    </body>
+</html>

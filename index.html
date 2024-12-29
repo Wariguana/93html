@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>SHOSSTORY</title>
+        <title>NNNN</title>
         <meta charset="utf-8">
         <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,18 +15,17 @@
             });
         </script>
         <style>
-            html {
-                scroll-behavior: smooth;
-            }
-
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
                 text-align: center;
             }
+            html {
+                scroll-behavior: smooth;
+            }
             body {
-                background-color: #ffffff; 
+                background-color: #ffd9ec;
                 color: #666666;
                 font-family: Arial, sans-serif;
             }
@@ -93,6 +92,9 @@
             .nav .icons a:hover {
                 color: #007BFF;
             }
+            .nav h1 {
+                color: white;
+            }
             .dropdown {
                 position: relative;
                 display: inline-block;
@@ -125,7 +127,7 @@
                 top: 0;
                 left: 100%;
                 display: none;
-                white-space: nowrap; /* 避免文字換行 */
+                white-space: nowrap;
             }
             .dropdown .dropdown-content .dropdown:hover .dropdown-content {
                 display: block;
@@ -153,7 +155,7 @@
             /* Faculty section */
             .faculty {
                 background-color: #ffd9ec;
-                padding: 40px 20px;
+                padding: 0px;
                 text-align: center;
             }
             .faculty h2 {
@@ -188,19 +190,31 @@
             }
             /* Slider */
             .slider {
-                background-color: black;
+                background-color: #ffd9ec;
                 margin-bottom: 20px;
                 width: 600px;
                 height: 450px;
-                margin: 0 auto;
             }
             .slider-container {
                 display: flex; 
-                justify-content: center; 
+                justify-content: center;
+            }
+            .slider img {
+                margin: 0;
+                padding: 0;
+                border: none;
+                display: block;
+            }
+            .flexslider {
+                background-color: #ffd9ec !important;
+                padding: 10px;
+                margin: 0;
+                padding: 0;
+                border: none;
             }
             /* Contact section */
             .contact {
-                background-color: #f9f9f9;
+                background-color: #ffd9ec;
                 padding: 40px 20px;
             }
             .contact h2 {
@@ -251,7 +265,27 @@
                 height: 50px; 
                 margin: 0 10px;
             }
-
+            .contact .payment-methods {
+                width: 100%;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .contact .payment-methods .methods {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .contact .payment-methods .methods img {
+                width: 80px;
+                height: auto;
+                border-radius: 5px;
+                transition: transform 0.3s;
+            }
+            .contact .payment-methods .methods img:hover {
+                transform: scale(1.1);
+            }
             /* Footer */
             footer {
                 background-color: #333333;
@@ -280,12 +314,12 @@
                         <a href="#home">首頁</a>
                         <a href="#introduction">賣場簡介</a>
                         <div class="dropdown">
-                            <a href="#faculty">熱門品牌</a>
+                            <a href="#faculty">查看更多</a>
                             <div class="dropdown-content">
-                                <a href="#faculty">Nike</a>
-                                <a href="#faculty">New Balance</a>
-                                <a href="#faculty">Asics</a>
-                                <a href="#faculty">Adidas</a>
+                                <a href="#faculty">ORANGE</a>
+                                <a href="#faculty">APPLE</a>
+                                <a href="#faculty">STRAWBERRY</a>
+                                <a href="#faculty">BANANA</a>
                             </div>
                         </div>
                         <a href="#about">聯絡我們</a>
@@ -294,13 +328,14 @@
             </div>
         </div>
         <div class="banner" id="introduction">
-            <h1>賣場簡介</h1>
-            <h1>精選全球頂級鞋履品牌</h1>
-            <h1>無論運動或正式場合</h1>
-            <h1>我們讓您走出自信每一步！</h1>
+            <h1>賣場介紹</h1>
+            <h1>☆韓國文創選物☆</h1>
+            <h1>:.｡.生活這麼難，我們需要被可愛包圍 .｡.:</h1>
         </div>
         <div class="faculty" id="faculty">
-            <h2>熱門品牌</h2>
+            <div class="nav">   
+                <h1>查看更多</h1>
+            </div>
             <div class="container">
                 <a class="teacher" href="#">
                     <img src="https://github.com/Wariguana/93html/raw/main/fa1.jpg" alt="ORANGE">
@@ -311,8 +346,8 @@
                     <h3>APPLE</h3>
                 </a>
                 <a class="teacher" href="#">
-                    <img src="https://github.com/Wariguana/93html/raw/main/fa5.jpg" alt="STRAEBERRY">
-                    <h3>STRAEBERRY</h3>
+                    <img src="https://github.com/Wariguana/93html/raw/main/fa5.jpg" alt="STRAWBERRY">
+                    <h3>STRAWBERRY</h3>
                 </a>        
                 <a class="teacher" href="#">
                     <img src="https://github.com/Wariguana/93html/raw/main/fa4.jpg" alt="BANANA">
@@ -332,31 +367,39 @@
             </div>
         </div>
         <div class="contact" id="about">
-            <h2>聯絡我們</h2>
+            <div class="nav">   
+                <h1>聯絡我們</h1>
+            </div>
             <div class="infos">
                 <div class="left">
-                    <b>SHOSSTORY </b>
-                    <span>客服專線: 0800-123-456</span>
-                    <b>服務時間: 週一至週五 10:00 - 18:00</b>
-                    <span>Email: shosstory@gmail.com</span>
+                    <b>NNNN </b>
+                    <span>官方LINE : @NNNN1234</span>
+                    <b>客服信箱 : NNNN1234@gmail.com</b>
+                    <span>實體店址 : 新竹縣新豐鄉新興路1號</span>
                 </div>
                 <div class="right">
                     <p>追蹤我們的社群平台：</p>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="https://github.com/Wariguana/html/raw/main/D2.jpg" alt="Instagram">
-                    </a>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="https://github.com/Wariguana/html/raw/main/D3.jpg" alt="Facebook">
+                        <img src="https://github.com/Wariguana/93html/raw/main/ig.png" alt="Instagram">
                     </a>
                     <a href="https://line.me" target="_blank">
-                        <img src="https://github.com/Wariguana/html/raw/main/D1.jpg" alt="LINE">
+                        <img src="https://github.com/Wariguana/93html/raw/main/line.png" alt="LINE">    
                     </a>
                 </div>
+                <div class="payment-methods">
+                    <div class="methods">
+                        <img src="https://github.com/Wariguana/93html/raw/main/visa.png" alt="visa">
+                        <img src="https://github.com/Wariguana/93html/raw/main/mastercard.png" alt="mastercard">
+                        <img src="https://github.com/Wariguana/93html/raw/main/jcb.png" alt="jcb">
+                        <img src="https://github.com/Wariguana/93html/raw/main/applepay.png" alt="applepay">
+                    </div>
+                </div>
+                
             </div>
         </div>
         
         <div class="footer">
-            &copy; 2024 SHOSSTORY. All Rights Reserved.
+            &copy; 2024 NNNN. All Rights Reserved.
         </div>
     </body>
 </html>

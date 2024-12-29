@@ -15,6 +15,10 @@
             });
         </script>
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
             * {
                 margin: 0;
                 padding: 0;
@@ -68,7 +72,7 @@
             }
             /* Navigation bar */
             .nav {
-                background-color: #333;
+                background-color: #ffd9ec;
                 color: white;
                 padding: 10px 0;
                 display: flex;
@@ -134,14 +138,14 @@
             }
             /* Banner */
             .banner {
-                background-image: linear-gradient(to bottom, #1a1a1a, #333333);
+                background-image: linear-gradient(to bottom, #ffd9ec, #ffd0ff);
                 color: rgb(221, 221, 221);
                 padding: 40px 20px;
                 text-align: center;
             }
             .banner h1 {
                 margin-bottom: 20px;
-                color : rgba(255, 255, 255, 0.512);
+                color : white;
                 font-weight: bold;
                 letter-spacing: 1px;
                 text-shadow: 1px 1px 4px rgba(35, 26, 26, 0.8);
@@ -153,6 +157,7 @@
                 text-align: center;
             }
             .faculty h2 {
+                color: white;
                 font-size: 28px;
                 margin-bottom: 20px;
             }
@@ -176,7 +181,7 @@
             }
 
             .faculty .teacher h3 {
-                background-color: rgba(39,40,34,0.5);
+                background-color: #d2e9ff;
                 color: white;
                 padding: 10px;
                 border-radius: 5px;
@@ -266,18 +271,18 @@
                 <div class="dropdown">
                     <a href="#"><i class="fas fa-bars"></i></a>
                     <div class="dropdown-content">
-                        <a href="#">首頁</a>
-                        <a href="#">賣場簡介</a>
+                        <a href="#home">首頁</a>
+                        <a href="#introduction">賣場簡介</a>
                         <div class="dropdown">
-                            <a href="#">熱門品牌</a>
+                            <a href="#faculty">熱門品牌</a>
                             <div class="dropdown-content">
-                                <a href="#">Nike</a>
-                                <a href="#">New Balance</a>
-                                <a href="#">Asics</a>
-                                <a href="#">Adidas</a>
+                                <a href="#faculty">Nike</a>
+                                <a href="#faculty">New Balance</a>
+                                <a href="#faculty">Asics</a>
+                                <a href="#faculty">Adidas</a>
                             </div>
                         </div>
-                        <a href="#">聯絡我們</a>
+                        <a href="#about">聯絡我們</a>
                     </div>
                 </div>
             </div>
